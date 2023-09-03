@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Loda To-do</title>
+		<meta http-equiv="Content-Type"content="text/html; charset=UTF-8"/><!--css-->
+  <link th:href="@{/css/bootstrap.css}"rel="stylesheet"/>
+  <link th:href="@{/css/main.css}"rel="stylesheet"/><!--js-->
+  <script th:src="@{/js/bootstrap.js}"></script>
+  </head>
+  <body>
+	  <h1>To-do</h1>
+	  <form th:action="@{/addMethod}"th:object="${method}"method="POST">
+		  <p>mã: <input type="text"th:field="*{ma_phuong_thuc}"/></p>
+		  <p>tên: <input type="text"th:field="*{ten_phuong_thuc}"/></p>
+		  <p><button type="submit"class="btn btn-success">Add</button></p>
+		  </form>
+	</body>
+</html>
